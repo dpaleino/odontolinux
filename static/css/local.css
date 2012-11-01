@@ -1,0 +1,10 @@
+body {
+  padding-top: 60px;
+}
+
+.navbar .brand {
+  float: right;
+  color: black;
+  font-weight: bold;
+  margin-left: 10px;
+}
