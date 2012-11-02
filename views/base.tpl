@@ -22,58 +22,62 @@
         <span class="icon-bar"></span>
       </button>
       <a class="brand" href="/">OdontoLinux</a>
-      <div class="nav-collapse">
+      <div class="nav-collapse collapse">
         <ul class='nav' role='navigation'>
-          <li class="active"><a href="#">Calendario</a></li>
+          <li class="active"><a href="/"><i class="icon-calendar"></i> Home</a></li>
           <li class='dropdown'>
             <a class='dropdown-toggle' id='dPazienti' role='button' data-toggle='dropdown' data-target='#' href="#pazienti">
+              <i class="icon-user"></i>
               Pazienti
               <b class='caret'></b>
             </a>
             <ul class='dropdown-menu' role='menu' aria-labelledby='dPazienti'>
-              <li><a href='#'>Aggiungi paziente</a></li>
-              <li><a href='#'>Visualizza pazienti</a></li>
-              <li><a href='#'>Lista d'attesa</a></li>
-              <li><a href='#'>Pazienti con cure da effettuare</a></li>
-              <li><a href='#'>Pazienti con cure potenziali</a></li>
+              <li><a href='/pazienti/nuovo'><i class="icon-plus"></i> Aggiungi paziente</a></li>
+              <li><a href='#'><i class="icon-search"></i> Visualizza pazienti</a></li>
+              <li><a href='#'><i class="icon-time"></i> Lista d'attesa</a></li>
+              <li><a href='#'><i class="icon-folder-open"></i> Pazienti con cure da effettuare</a></li>
+              <li><a href='#'><i class="icon-tasks"></i> Pazienti con cure potenziali</a></li>
             </ul>
           </li>
           <li class='dropdown'>
             <a class='dropdown-toggle' id='dOperatori' role='button' data-toggle='dropdown' data-target='#' href="#operatori">
+              <i class="myicon-group"></i>
               Operatori
               <b class='caret'></b>
             </a>
             <ul class='dropdown-menu' role='menu' aria-labelledby='dOperatori'>
-              <li><a href='#'>Aggiungi operatore</a></li>
-              <li><a href='#'>Visualizza operatori</a></li>
-              <li><a href='#'>Gestione presenze</a></li>
+              <li><a href='#'><i class="icon-plus"></i> Aggiungi operatore</a></li>
+              <li><a href='#'><i class="icon-search"></i> Visualizza operatori</a></li>
+              <li><a href='#'><i class="icon-th-list"></i> Gestione presenze</a></li>
             </ul>
           </li>
           <li class='dropdown'>
             <a class='dropdown-toggle' id='dFatturazione' role='button' data-toggle='dropdown' data-target='#' href="#fatturazione">
+              <i class="myicon-euro"></i>
               Fatturazione
               <b class='caret'></b>
             </a>
             <ul class='dropdown-menu' role='menu' aria-labelledby='dFatturazione'>
               <li class='dropdown-submenu'>
-                <a href='#'>Fatture</a>
+                <a href='#'><i class="myicon-file"></i> Fatture</a>
                 <ul class='dropdown-menu'>
-                  <li><a href='#'>Aggiungi fattura</a></li>
-                  <li><a href='#'>Aggiungi nota di credito</a></li>
-                  <li><a href='#'>Visualizza fatture</a></li>
+                  <li><a href='#'><i class="icon-plus"></i> Aggiungi fattura</a></li>
+                  <li><a href='#'><i class="icon-plus"></i> Aggiungi nota di credito</a></li>
+                  <li><a href='#'><i class="icon-search"></i> Visualizza fatture</a></li>
                 </ul>
               </li>
               <li class='dropdown-submenu'>
-                <a href="#incassi">Incassi</a>
+                <a href="#incassi"><i class="myicon-coins"></i> Incassi</a>
                 <ul class='dropdown-menu'>
-                  <li><a href='#'>Aggiungi incasso</a></li>
-                  <li><a href='#'>Visualizza incassi</a></li>
+                  <li><a href='#'><i class="icon-plus"></i> Aggiungi incasso</a></li>
+                  <li><a href='#'><i class="icon-search"></i> Visualizza incassi</a></li>
                 </ul>
               </li>
             </ul>
           </li>
           <li class='dropdown'>
             <a class='dropdown-toggle' id='dStatistiche' role='button' data-toggle='dropdown' data-target='#' href="#statistiche">
+              <i class="myicon-stats"></i>
               Statistiche
               <b class='caret'></b>
             </a>
@@ -120,12 +124,13 @@
           </li>
           <li class='dropdown'>
             <a class='dropdown-toggle' id='dPersonalizza' role='button' data-toggle='dropdown' data-target='#' href="#personalizza">
+              <i class="icon-cog"></i>
               Personalizza
               <b class='caret'></b>
             </a>
             <ul class='dropdown-menu' role='menu' aria-labelledby='dPersonalizza'>
               <li class='dropdown-submenu'>
-                <a href='#'>Calendario</a>
+                <a href='#'>Generale</a>
                 <ul class='dropdown-menu'>
                   <li><a href='#'>Preferenze studio</a></li>
                   <li><a href='#'>Sale operatorie</a></li>
@@ -168,19 +173,20 @@
           </li>
           <li class='dropdown'>
             <a class='dropdown-toggle' id='dUtilita' role='button' data-toggle='dropdown' data-target='#' href="#utilita">
+              <i class="icon-certificate"></i>
               Utilità
               <b class='caret'></b>
             </a>
             <ul class='dropdown-menu' role='menu' aria-labelledby='dUtilita'>
               <li class='dropdown-submenu'>
-                <a href='#'>Backup</a>
+                <a href='#'><i class="myicon-cargo"></i> Backup</a>
                 <ul class='dropdown-menu'>
-                  <li><a href='#'>Esporta backup</a></li>
-                  <li><a href='#'>Ripristina backup</a></li>
+                  <li><a href='#'><i class="icon-download"></i> Esporta backup</a></li>
+                  <li><a href='#'><i class="icon-upload"></i> Ripristina backup</a></li>
                 </ul>
               </li>
-              <li><a href='#'>Gestione permessi</a></li>
-              <li><a href='#'>Gestione utenti</a></li>
+              <li><a href='#'><i class="myicon-keys"></i> Gestione permessi</a></li>
+              <li><a href='#'><i class="icon-user"></i> Gestione utenti</a></li>
             </ul>
           </li>
         </ul>
