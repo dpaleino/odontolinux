@@ -52,5 +52,9 @@ def calendario(what):
                 allDay=False,
             )])
 
+@route('/pazienti/nuovo')
+def nuovo_paziente():
+	return template('pazienti/nuovo')
+
 if __name__ == '__main__':
 	run(host='localhost', port=8080, reloader=True)
