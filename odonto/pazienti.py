@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 #  Copyright © 2012, David Paleino <d.paleino@gmail.com>
@@ -21,39 +20,7 @@
 
 from bottle import *
 from bottle import jinja2_view as view, jinja2_template as template
-import bottle
-import os
-import cjson
 
-from odonto import *
-
-bottle.debug(True)
-db.init_db()
-
-app = default_app()
-app.router.add_filter('safepath', lambda x: (r'[a-zA-Z\.\-/]*?', None, None))
-
-@route('/')
-def index():
-  return template('index')
-
-@route('/<path:re:(js|css|img)>/<filename:safepath>')
-def static(path, filename):
-  return static_file(os.path.join(path, filename), 'static')
-
-@route('/calendario/<what>')
-def calendario(what):
-  if what == 'appuntamenti':
-    from datetime import datetime
-    test = datetime.now().strftime('%Y-%m-%d')
-    return cjson.encode([dict(
-      id=1,
-      title='Foo Bar',
-      color='#0f0f0f',
-      start='%s 11:00:00' % test,
-      end='%s 22:30:00' % test,
-      allDay=False,
-    )])
-
-if __name__ == '__main__':
-  run(host='localhost', port=8080, reloader=True)
+@route('/pazienti/nuovo')
+def nuovo_paziente():
+  return template('pazienti/nuovo')
