@@ -6,16 +6,6 @@
 {% endblock %}
 
 {% block content %}
-<!--
-<div class='page-header'>
-  <h1>OdontoLinux</h1>
-</div>
-<p>Bla bla</p>
-<div class="alert">
-  <button type="button" class="close" data-dismiss="alert">×</button>
-  <strong>Warning!</strong> Best check yo self, you're not looking too good.
-</div>
--->
 <div class='row-fluid'>
 <div class="btn-toolbar span1 pull-right">
   <div class="btn-group btn-group-vertical">
@@ -79,7 +69,7 @@ $(document).ready(function() {
             day: 'giorno',
         },
         weekMode: 'liquid',
-        allDaySlot: false,
+        allDaySlot: true,
         allDayText: 'intero giorno',
         axisFormat: 'H:mm',
         firstHour: '8',
