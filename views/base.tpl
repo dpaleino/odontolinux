@@ -201,7 +201,7 @@
 {% block content %}
 {% endblock %}
 </div>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 {% block scripts %}{% endblock %}
 </body>
