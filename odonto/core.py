@@ -55,6 +55,3 @@ class Gestionale(object):
                 allDay=False,
             )
             return json.encode([ret])
-
-    def on_exit(self):
-        self.model.close()

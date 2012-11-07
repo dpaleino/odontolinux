@@ -27,64 +27,29 @@ except ImportError:
     except ImportError:
         import json
 
-#~ import shelve
+import shelve
 from glob import glob
-import os
-import shutil
-import pickle
+from collections import defaultdict
 
-class PersistentDict(dict):
-    def __init__(self, filename, flag='c', mode=None, *args, **kwargs):
-        self.flag = flag
-        self.mode = mode
-        self.filename = filename
-        if flag != 'n' and os.access(filename, os.R_OK):
-            fileobj = open(filename, 'rb')
-            with fileobj:
-                self.load(fileobj)
-        super(PersistentDict, self).__init__(self, *args, **kwargs)
-
-    def sync(self):
-        if self.flag == 'r':
-            return
-        tempname = self.filename + '.tmp'
-        fileobj = open(tempname, 'wb')
-        try:
-            self.dump(fileobj)
-        except Exception:
-            os.remove(tempname)
-            raise
-        finally:
-            fileobj.close()
-        shutil.move(tempname, self.filename)    # atomic commit
-        if self.mode is not None:
-            os.chmod(self.filename, self.mode)
-
-    def close(self):
-        self.sync()
+class Transaction():
+    def __init__(self, model):
+        self._model = model
+        self._lock = FileLock('.lock')
 
     def __enter__(self):
+        self._lock.acquire()
         return self
 
     def __exit__(self, *exc_info):
-        self.close()
-
-    def dump(self, fileobj):
-        pickle.dump(dict(self), fileobj, 2)
-
-    def load(self, fileobj):
-        fileobj.seek(0)
-        try:
-            return self.update(pickle.load(fileobj))
-        except Exception:
-            pass
+        self._lock.release()
+        self._model.sync()
 
 class Model():
     DB_VER = 1
 
     def __init__(self):
-        #~ self.db = shelve.open('odonto.db', flag='c', writeback=True, protocol=2)
-        self.db = PersistentDict('odonto.db')
+        self.db = shelve.open('odonto.db', flag='c', writeback=True, protocol=2)
+        self.transaction = Transaction(self)
 
         self.init_db()
         self.load_tables()
@@ -99,7 +64,15 @@ class Model():
                 'version': self.DB_VER
             }
 
+    def sync(self):
+        # FIXME: tables shouldn't be manually listed here, but somehow
+        # automatically detected...
+        for tbl in [self.categories, self.treatments]:
+            self.db[tbl._shelve] = tbl.to_dict()
+        self.db.sync()
+
     def close(self):
+        self.sync()
         self.db.close()
 
     def load_tables(self):
@@ -113,8 +86,9 @@ class Model():
         return Treatment(data, self.treatments, model=self)
 
 class AttrDict(dict):
-    def __init__(self, data, parent=None, **kwargs):
+    def __init__(self, data, parent=None):
         super(AttrDict, self).__init__()
+
         if isinstance(data, dict):
             self.update(data)
         else:
@@ -147,6 +121,17 @@ class Table(dict):
             for k, v in tmp.iteritems():
                 self[k] = self._record(v)
 
+    def to_dict(self):
+        # FIXME: ugh.
+        tmp = [(k, v) for (k, v) in self.iteritems()]
+        tmp = dict(map(lambda x: (x[0], dict(x[1])), tmp))
+        newdict = defaultdict(dict)
+        for x in tmp.keys():
+            keys = filter(lambda x: not x.startswith('_'), tmp[x])
+            for k in keys:
+                newdict[x][k] = tmp[x][k]
+        return dict(newdict)
+
 class Category(AttrDict):
     pass
 
@@ -157,19 +142,20 @@ class Categories(Table):
 class Treatment(AttrDict):
     def __init__(self, data, parent=None, model=None):
         super(Treatment, self).__init__(data, parent)
-        self.model = model
+        self._model = model
 
     @property
     def category(self):
-        if not self.model:
+        if not self._model:
             raise Exception, 'Treatment not linked to a Model'
-        return self.model.category(self.cat_id)
+        return self._model.category(self.cat_id)
 
     @category.setter
     def category(self, value):
-        for k, v in self.model.categories.iteritems():
+        for k, v in self._model.categories.iteritems():
             if v == value:
-                self.cat_id = k
+                with self._model.transaction:
+                    self.cat_id = k
                 break
 
     # FIXME: 
@@ -182,7 +168,8 @@ class Treatment(AttrDict):
 
     @prezzo.setter
     def prezzo(self, value):
-        self['prezzo'] = '%.2f' % float(value)
+        with self._model.transaction:
+            self['prezzo'] = '%.2f' % float(value)
 
 class Treatments(Table):
     _shelve = 'treatments'

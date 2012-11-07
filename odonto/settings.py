@@ -100,13 +100,14 @@ class Settings(object):
         elif action == 'update':
             value = req.value
             row = data[rowid]
-            if req.columnName == 'Codice':
-                row.cod = value
-            elif req.columnName == 'Descrizione':
-                row.desc = value
-            elif req.columnName == 'Categoria':
-                row.categoria = value
-                index = 'cat_id'
-            elif req.columnName == 'Prezzo':
-                row.prezzo = value
+            with self.model.transaction:
+                if req.columnName == 'Codice':
+                    row.cod = value
+                elif req.columnName == 'Descrizione':
+                    row.desc = value
+                elif req.columnName == 'Categoria':
+                    row.cat_id = value
+                    index = 'cat_id'
+                elif req.columnName == 'Prezzo':
+                    row.prezzo = value
             return 'ok'

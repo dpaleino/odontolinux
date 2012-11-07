@@ -31,7 +31,6 @@ app = default_app()
 app.router.add_filter('safepath', lambda x: (r'[a-zA-Z\.\-\/\_]*?', None, None))
 
 gestionale = core.Gestionale()
-atexit.register(gestionale.on_exit)
 
 import models
 import patients
