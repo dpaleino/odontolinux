@@ -44,13 +44,13 @@ class TestModels(object):
         assert isinstance(self.m.categories, models.Categories)
 
     def test_categories_data(self):
-        assert isinstance(self.m.categories['11'], models.Categoria)
+        assert isinstance(self.m.categories['11'], models.Category)
 
     def test_treatment_isinstance(self):
         assert isinstance(self.m.treatment('146'), models.Treatment)
 
     def test_treatment_cat_isinstance(self):
-        assert isinstance(self.m.treatment('146').categoria, models.Category)
+        assert isinstance(self.m.treatment('146').category, models.Category)
 
     def test_treatment_cat_data(self):
         assert self.m.treatment('146').category.name == 'Ortodonzia'

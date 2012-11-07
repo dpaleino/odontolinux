@@ -1,3 +1,4 @@
 odonto.db
 *.pyc
 *.geany
+.coverage
