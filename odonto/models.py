@@ -27,14 +27,64 @@ except ImportError:
     except ImportError:
         import json
 
-import shelve
+#~ import shelve
 from glob import glob
+import os
+import shutil
+import pickle
+
+class PersistentDict(dict):
+    def __init__(self, filename, flag='c', mode=None, *args, **kwargs):
+        self.flag = flag
+        self.mode = mode
+        self.filename = filename
+        if flag != 'n' and os.access(filename, os.R_OK):
+            fileobj = open(filename, 'rb')
+            with fileobj:
+                self.load(fileobj)
+        super(PersistentDict, self).__init__(self, *args, **kwargs)
+
+    def sync(self):
+        if self.flag == 'r':
+            return
+        tempname = self.filename + '.tmp'
+        fileobj = open(tempname, 'wb')
+        try:
+            self.dump(fileobj)
+        except Exception:
+            os.remove(tempname)
+            raise
+        finally:
+            fileobj.close()
+        shutil.move(tempname, self.filename)    # atomic commit
+        if self.mode is not None:
+            os.chmod(self.filename, self.mode)
+
+    def close(self):
+        self.sync()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc_info):
+        self.close()
+
+    def dump(self, fileobj):
+        pickle.dump(dict(self), fileobj, 2)
+
+    def load(self, fileobj):
+        fileobj.seek(0)
+        try:
+            return self.update(pickle.load(fileobj))
+        except Exception:
+            pass
 
 class Model():
     DB_VER = 1
 
     def __init__(self):
-        self.db = shelve.open('odonto.db', flag='c', writeback=True, protocol=2)
+        #~ self.db = shelve.open('odonto.db', flag='c', writeback=True, protocol=2)
+        self.db = PersistentDict('odonto.db')
 
         self.init_db()
         self.load_tables()
