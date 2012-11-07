@@ -1,4 +1,5 @@
 __all__ = [
-	'db',
-	'pazienti',
+  'modelli',
+  'pazienti',
+  'preferenze',
 ]

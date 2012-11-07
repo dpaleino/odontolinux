@@ -19,20 +19,12 @@
 #  MA 02110-1301, USA.
 #
 
-import shelve
-import cjson
-from glob import glob
+from odonto import preferenze
+from nose.tools import raises
 
-db = shelve.open('odonto.db', writeback=True)
+class TestPreferenze(object):
+    def test_api_categorie(self):
+        preferenze.api_elenco_categorie()
 
-DB_VER = 1
-
-def init_db():
-	if not db.has_key('odonto'):
-		for j in glob('json/*.json'):
-			key = j[j.find('/') + 1:j.rfind('.')]
-			db[key] = cjson.decode(open(j).read())
-
-		db['odonto'] = {
-			'versione': DB_VER
-		}
+    def test_api_prestazioni(self):
+        pass

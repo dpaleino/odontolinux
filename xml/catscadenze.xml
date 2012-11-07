@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<elenco>
+  <categoria id="0" nome="Assicurazioni veicoli" />
+  <categoria id="1" nome="Stipendi" />
+  <categoria id="2" nome="Ritenuta d'acconto" />
+  <categoria id="3" nome="Leasing" />
+  <categoria id="4" nome="Affitto" />
+  <categoria id="5" nome="Utenze" />
+  <categoria id="6" nome="Assicurazioni" />
+  <categoria id="7" nome="Peridenza" />
+  <categoria id="8" nome="F24" />
+  <categoria id="9" nome="Bollo auto" />
+  <categoria id="10" nome="Revisione manutenzione radiografici" />
+  <categoria id="11" nome="Commercialista" />
+  <categoria id="12" nome="Consulente del lavoro" />
+  <categoria id="13" nome="Rifiuti speciali" />
+  <categoria id="14" nome="Tassa smaltimento rifiuti" />
+  <categoria id="1" nome="Saldo prestazione" />
+</elenco>

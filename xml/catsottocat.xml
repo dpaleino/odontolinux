@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<elenco>
+  <categoria id="1" nome="Sezione Diagnostica e Radiologia" />
+  <categoria id="2" nome="Igiene Orale e Prevenzione" />
+  <categoria id="3" nome="Paradontologia" />
+  <categoria id="4" nome="Chirurgia" />
+  <categoria id="5" nome="Conservativa" />
+  <categoria id="6" nome="Endodonzia" />
+  <categoria id="7" nome="Implantologia" />
+  <categoria id="8" nome="Protesi Fisse" />
+  <categoria id="9" nome="Protesi Rimovibili o Mobili" />
+  <categoria id="10" nome="Gnatologia" />
+  <categoria id="11" nome="Ortodonzia" />
+</elenco>

@@ -18,9 +18,16 @@
 #  MA 02110-1301, USA.
 #
 
-from bottle import *
-from bottle import jinja2_view as view, jinja2_template as template
+from bottle import route
 
-@route('/pazienti/nuovo')
-def nuovo_paziente():
-    return template('pazienti/nuovo')
+@route('/')
+def index():
+  return gestionale.index()
+
+@route('/<path:re:(js|css|img)>/<filename:safepath>')
+def static(path, filename):
+  return gestionale.static(path, filename)
+
+@route('/calendario/<data>')
+def calendario(data):
+  return gestionale.calendario(data)

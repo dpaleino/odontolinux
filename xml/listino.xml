@@ -1,0 +1,158 @@
+<elenco>
+  <lavorazione id="1" id_cat="1" cod_lavorazione="MOD SR" descrizione="Rilievo impronte per modelli studio del caso" costoa="0" costob="0" />
+  <lavorazione id="2" id_cat="1" cod_lavorazione="OTM" descrizione="Ortopantomografia" costoa="0" costob="0" />
+  <lavorazione id="3" id_cat="1" cod_lavorazione="RX E" descrizione="Radiografia endorale" costoa="0" costob="0" />
+  <lavorazione id="3" id_cat="1" cod_lavorazione="RX O" descrizione="Radiografia occlusale" costoa="0" costob="0" />
+  <lavorazione id="4" id_cat="1" cod_lavorazione="TLR" descrizione="Teleradiografia del cranio" costoa="0" costob="0" />
+  <lavorazione id="5" id_cat="2" cod_lavorazione="ABLA" descrizione="Ablazione tartaro" costoa="0" costob="0" />
+  <lavorazione id="6" id_cat="2" cod_lavorazione="RIC IG" descrizione="Richiamo di igiene" costoa="0" costob="0" />
+  <lavorazione id="7" id_cat="2" cod_lavorazione="FLUPR" descrizione="Applicazioni topiche di fluoro per arcata" costoa="0" costob="0" />
+  <lavorazione id="8" id_cat="2" cod_lavorazione="SIG" descrizione="Sigillatura per elemento" costoa="0" costob="0" />
+  <lavorazione id="9" id_cat="2" cod_lavorazione="SBI S" descrizione="Sbiancamento arcata superiore" costoa="0" costob="0" />
+  <lavorazione id="10" id_cat="2" cod_lavorazione="SBI I" descrizione="Sbiancamento arcata inferiore" costoa="0" costob="0" />
+  <lavorazione id="11" id_cat="2" cod_lavorazione="SBI E" descrizione="Sbiancamento singolo elemento" costoa="0" costob="0" />
+  <lavorazione id="12" id_cat="3" cod_lavorazione="CHGE" descrizione="Chirurgia gengivale" costoa="0" costob="0" />
+  <lavorazione id="13" id_cat="3" cod_lavorazione="CHMQ" descrizione="Chirurgia muco-gengivale per quadrante" costoa="0" costob="0" />
+  <lavorazione id="13" id_cat="3" cod_lavorazione="CHMS" descrizione="Chirurgia muco-gengivale per sestante" costoa="0" costob="0" />
+  <lavorazione id="14" id_cat="3" cod_lavorazione="LERA" descrizione="Chirurgia lembo riposizionamento apicale" costoa="0" costob="0" />
+  <lavorazione id="15" id_cat="3" cod_lavorazione="LCCA" descrizione="Lembo courettage cielo aperto" costoa="0" costob="0" />
+  <lavorazione id="16" id_cat="3" cod_lavorazione="CHOQ" descrizione="Chirurgia ossea quadrante" costoa="0" costob="0" />
+  <lavorazione id="17" id_cat="3" cod_lavorazione="CHOS" descrizione="Chirurgia ossea sestante" costoa="0" costob="0" />
+  <lavorazione id="18" id_cat="3" cod_lavorazione="GCTE" descrizione="Gengivectomia per singolo elemento" costoa="0" costob="0" />
+  <lavorazione id="19" id_cat="3" cod_lavorazione="GCTQ" descrizione="Gengivectomia per quadrante" costoa="0" costob="0" />
+  <lavorazione id="20" id_cat="3" cod_lavorazione="GCTS" descrizione="Gengivectomia per sestante" costoa="0" costob="0" />
+  <lavorazione id="21" id_cat="3" cod_lavorazione="IMB" descrizione="Inserimento di materiale biocompatibile" costoa="0" costob="0" />
+  <lavorazione id="22" id_cat="3" cod_lavorazione="LRS" descrizione="Levigatura radicolare e courettage gengivale per sestante" costoa="0" costob="0" />
+  <lavorazione id="23" id_cat="3" cod_lavorazione="LRQ" descrizione="Levigatura radicolare e courettage gengivale per quadrante" costoa="0" costob="0" />
+  <lavorazione id="24" id_cat="3" cod_lavorazione="SPLS" descrizione="Splintaggio interdentale superiore" costoa="0" costob="0" />
+  <lavorazione id="25" id_cat="3" cod_lavorazione="SPLI" descrizione="Splintaggio interdentale inferiore" costoa="0" costob="0" />
+  <lavorazione id="26" id_cat="3" cod_lavorazione="LASE" descrizione="Applicazione laser" costoa="0" costob="0" />
+  <lavorazione id="27" id_cat="4" cod_lavorazione="ANGE" descrizione="Anestesia generale" costoa="0" costob="0" />
+  <lavorazione id="28" id_cat="4" cod_lavorazione="APCT" descrizione="Apicectomia" costoa="0" costob="0" />
+  <lavorazione id="29" id_cat="4" cod_lavorazione="BIOP" descrizione="Biopsie" costoa="0" costob="0" />
+  <lavorazione id="30" id_cat="4" cod_lavorazione="DOC" descrizione="Disinclusione orto-chirurgica denti ritenuti" costoa="0" costob="0" />
+  <lavorazione id="31" id_cat="4" cod_lavorazione="EST" descrizione="Estrazione di dente o radice" costoa="0" costob="0" />
+  <lavorazione id="32" id_cat="4" cod_lavorazione="ESRX" descrizione="Estrazione di dente o radice con Rx" costoa="0" costob="0" />
+  <lavorazione id="33" id_cat="4" cod_lavorazione="EIOT" descrizione="Estrazione di dente o radice in inclusione ossea totale" costoa="0" costob="0" />
+  <lavorazione id="34" id_cat="4" cod_lavorazione="EIOP" descrizione="Estrazione di dente o radice in inclusione ossea parziale" costoa="0" costob="0" />
+  <lavorazione id="35" id_cat="4" cod_lavorazione="GER" descrizione="Germectomia" costoa="0" costob="0" />
+  <lavorazione id="36" id_cat="4" cod_lavorazione="ETDM" descrizione="Estrazione di terzo molare in disodontiasi" costoa="0" costob="0" />
+  <lavorazione id="37" id_cat="4" cod_lavorazione="CHI-PR" descrizione="Interventi di chirurgia preprotesica" costoa="0" costob="0" />
+  <lavorazione id="38" id_cat="4" cod_lavorazione="FREM" descrizione="Frenulotomia" costoa="0" costob="0" />
+  <lavorazione id="39" id_cat="4" cod_lavorazione="FREC" descrizione="Frenulectomia" costoa="0" costob="0" />
+  <lavorazione id="40" id_cat="4" cod_lavorazione="IA" descrizione="Incisione di ascesso" costoa="0" costob="0" />
+  <lavorazione id="41" id_cat="4" cod_lavorazione="AS-CIS" descrizione="Asportazione cisti mucose o piccole neoplasie per sestante" costoa="0" costob="0" />
+  <lavorazione id="42" id_cat="4" cod_lavorazione="AS-EP" descrizione="Intervento asportazione di epulide" costoa="0" costob="0" />
+  <lavorazione id="43" id_cat="4" cod_lavorazione="RIZ" descrizione="Rizectomia" costoa="0" costob="0" />
+  <lavorazione id="44" id_cat="4" cod_lavorazione="RIZO" descrizione="Rizotomia" costoa="0" costob="0" />
+  <lavorazione id="45" id_cat="5" cod_lavorazione="INPO" descrizione="Incappucciamento della polpa" costoa="0" costob="0" />
+  <lavorazione id="46" id_cat="5" cod_lavorazione="INTL" descrizione="Intarsi in LP" costoa="0" costob="0" />
+  <lavorazione id="47" id_cat="5" cod_lavorazione="INTC" descrizione="Intarsi in composito" costoa="0" costob="0" />
+  <lavorazione id="48" id_cat="5" cod_lavorazione="INTCE" descrizione="Intarsi in ceramica" costoa="0" costob="0" />
+  <lavorazione id="49" id_cat="5" cod_lavorazione="OT I" descrizione="Otturazione di I classe" costoa="0" costob="0" />
+  <lavorazione id="50" id_cat="5" cod_lavorazione="OT II M" descrizione="Otturazione di II classe mesiale" costoa="0" costob="0" />
+  <lavorazione id="51" id_cat="5" cod_lavorazione="OT II D" descrizione="Otturazione di II classe distale" costoa="0" costob="0" />
+  <lavorazione id="52" id_cat="5" cod_lavorazione="OT III" descrizione="Otturazione di III classe" costoa="0" costob="0" />
+  <lavorazione id="53" id_cat="5" cod_lavorazione="OT IV" descrizione="Otturazione di IV classe" costoa="0" costob="0" />
+  <lavorazione id="54" id_cat="5" cod_lavorazione="OT V" descrizione="Otturazione di V classe" costoa="0" costob="0" />
+  <lavorazione id="55" id_cat="5" cod_lavorazione="OT LC" descrizione="Otturazione di II classe con lembo chirurgico" costoa="0" costob="0" />
+  <lavorazione id="56" id_cat="5" cod_lavorazione="CHPC" descrizione="Chiusura punto di contatto" costoa="0" costob="0" />
+  <lavorazione id="57" id_cat="6" cod_lavorazione="TC1" descrizione="Terapia 1 canale radicolare" costoa="0" costob="0" />
+  <lavorazione id="58" id_cat="6" cod_lavorazione="TC2" descrizione="Terapia 2 canali radicolari" costoa="0" costob="0" />
+  <lavorazione id="59" id_cat="6" cod_lavorazione="TC3" descrizione="Terapia 3 canali radicolari" costoa="0" costob="0" />
+  <lavorazione id="60" id_cat="6" cod_lavorazione="TC4" descrizione="Terapia 4 o più canali radicolari" costoa="0" costob="0" />
+  <lavorazione id="61" id_cat="6" cod_lavorazione="TCDD" descrizione="Terapia canalare dente deciduo comprensiva di otturazione" costoa="0" costob="0" />
+  <lavorazione id="62" id_cat="6" cod_lavorazione="PUL" descrizione="Pulpotomia e otturazione della camera pulpare" costoa="0" costob="0" />
+  <lavorazione id="63" id_cat="6" cod_lavorazione="APEC" descrizione="Trattamento di apecificazione" costoa="0" costob="0" />
+  <lavorazione id="64" id_cat="7" cod_lavorazione="DIMA" descrizione="Dima prechirurgica" costoa="0" costob="0" />
+  <lavorazione id="65" id_cat="7" cod_lavorazione="IMP" descrizione="Impianti osteo-integrati" costoa="0" costob="0" />
+  <lavorazione id="66" id_cat="7" cod_lavorazione="GRSM" descrizione="Intervento di grande rialzo del seno mascellare" costoa="0" costob="0" />
+  <lavorazione id="67" id_cat="7" cod_lavorazione="PRSM" descrizione="Intervento di piccolo rialzo del seno mascellare" costoa="0" costob="0" />
+  <lavorazione id="68" id_cat="7" cod_lavorazione="PMI" descrizione="Perno-moncone su impianto" costoa="0" costob="0" />
+  <lavorazione id="69" id_cat="8" cod_lavorazione="CMP" descrizione="Cementazione di protesi" costoa="0" costob="0" />
+  <lavorazione id="70" id_cat="8" cod_lavorazione="CRD" descrizione="Ceratura diagnostica" costoa="0" costob="0" />
+  <lavorazione id="71" id_cat="8" cod_lavorazione="FCO" descrizione="Faccette in composito" costoa="0" costob="0" />
+  <lavorazione id="72" id_cat="8" cod_lavorazione="FCR" descrizione="Faccette in ceramica" costoa="0" costob="0" />
+  <lavorazione id="73" id_cat="8" cod_lavorazione="COZ" descrizione="Corona integrale in Zirconio" costoa="0" costob="0" />
+  <lavorazione id="74" id_cat="8" cod_lavorazione="COCZ" descrizione="Corona in Ceramica-Zirconio" costoa="0" costob="0" />
+  <lavorazione id="75" id_cat="8" cod_lavorazione="COFU" descrizione="Corona fusa LP" costoa="0" costob="0" />
+  <lavorazione id="76" id_cat="8" cod_lavorazione="COLNP" descrizione="Corona fusa LNP" costoa="0" costob="0" />
+  <lavorazione id="77" id_cat="8" cod_lavorazione="CPFR" descrizione="Corona LP e faccetta in resina" costoa="0" costob="0" />
+  <lavorazione id="78" id_cat="8" cod_lavorazione="CFR" descrizione="Corona LNP e faccetta in resina" costoa="0" costob="0" />
+  <lavorazione id="79" id_cat="8" cod_lavorazione="CCE" descrizione="Corona LNP e ceramica" costoa="0" costob="0" />
+  <lavorazione id="80" id_cat="8" cod_lavorazione="CPC" descrizione="Corona LP e ceramica" costoa="0" costob="0" />
+  <lavorazione id="81" id_cat="8" cod_lavorazione="CCA" descrizione="Corona e ceramica-alluminia" costoa="0" costob="0" />
+  <lavorazione id="85" id_cat="8" cod_lavorazione="CPA" descrizione="Corona provvisoria armata" costoa="0" costob="0" />
+  <lavorazione id="86" id_cat="8" cod_lavorazione="CPR" descrizione="Corona provvisoria in resina" costoa="0" costob="0" />
+  <lavorazione id="87" id_cat="8" cod_lavorazione="MEIM" descrizione="Mesostruttura di ricostruzione su impianti" costoa="0" costob="0" />
+  <lavorazione id="88" id_cat="8" cod_lavorazione="PML" descrizione="Perno moncone fuso in LNP" costoa="0" costob="0" />
+  <lavorazione id="89" id_cat="8" cod_lavorazione="PMP" descrizione="Perno moncone fuso in LP" costoa="0" costob="0" />
+  <lavorazione id="90" id_cat="8" cod_lavorazione="PMFI" descrizione="Perno moncone in fibra" costoa="0" costob="0" />
+  <lavorazione id="91" id_cat="8" cod_lavorazione="RIM" descrizione="Rimozione di corone" costoa="0" costob="0" />
+  <lavorazione id="92" id_cat="8" cod_lavorazione="RIPE" descrizione="Rimozione di perni endocanalari" costoa="0" costob="0" />
+  <lavorazione id="93" id_cat="8" cod_lavorazione="RFR" descrizione="Riparazione di faccetta in resina" costoa="0" costob="0" />
+  <lavorazione id="94" id_cat="8" cod_lavorazione="RFC" descrizione="Riparazione di faccetta in ceramica" costoa="0" costob="0" />
+  <lavorazione id="95" id_cat="8" cod_lavorazione="MARY" descrizione="Struttura per Maryland bridge in LP" costoa="0" costob="0" />
+  <lavorazione id="96" id_cat="9" cod_lavorazione="SCH S" descrizione="Scheletrato superiore" costoa="0" costob="0" />
+  <lavorazione id="97" id_cat="9" cod_lavorazione="SCH I" descrizione="Scheletrato inferiore" costoa="0" costob="0" />
+  <lavorazione id="98" id_cat="9" cod_lavorazione="AER" descrizione="Aggiunta elemento in resina su protesi" costoa="0" costob="0" />
+  <lavorazione id="99" id_cat="9" cod_lavorazione="AEC" descrizione="Aggiunta elemento in ceramica su protesi" costoa="0" costob="0" />
+  <lavorazione id="100" id_cat="9" cod_lavorazione="CTF" descrizione="Controfresaggi" costoa="0" costob="0" />
+  <lavorazione id="101" id_cat="9" cod_lavorazione="PPS" descrizione="Protesi parziale in resina rimovibile superiore" costoa="0" costob="0" />
+  <lavorazione id="102" id_cat="9" cod_lavorazione="PPI" descrizione="Protesi parziale in resina rimovibile inferiore" costoa="0" costob="0" />
+  <lavorazione id="103" id_cat="9" cod_lavorazione="PPP" descrizione="Protesi parziale rimovibile provvisoria" costoa="0" costob="0" />
+  <lavorazione id="104" id_cat="9" cod_lavorazione="PTS" descrizione="Protesi totale con denti in resina superiore" costoa="0" costob="0" />
+  <lavorazione id="105" id_cat="9" cod_lavorazione="PTI" descrizione="Protesi totale con denti in resina inferiore" costoa="0" costob="0" />
+  <lavorazione id="106" id_cat="9" cod_lavorazione="TSC" descrizione="Protesi totale con denti in ceramica superiore" costoa="0" costob="0" />
+  <lavorazione id="107" id_cat="9" cod_lavorazione="TIC" descrizione="Protesi totale con denti in ceramica inferiore" costoa="0" costob="0" />
+  <lavorazione id="109" id_cat="9" cod_lavorazione="PIS" descrizione="Protesi totale immediata superiore" costoa="0" costob="0" />
+  <lavorazione id="110" id_cat="9" cod_lavorazione="PII" descrizione="Protesi totale immediata inferiore" costoa="0" costob="0" />
+  <lavorazione id="111" id_cat="9" cod_lavorazione="RDS" descrizione="Ribasatura di protesi rimovibile-sistema diretto superiore" costoa="0" costob="0" />
+  <lavorazione id="112" id_cat="9" cod_lavorazione="RIS" descrizione="Ribasatura di protesi rimovibile-sistema indiretto superiore" costoa="0" costob="0" />
+  <lavorazione id="113" id_cat="9" cod_lavorazione="RID" descrizione="Ribasatura di protesi rimovibile-sistema diretto inferiore" costoa="0" costob="0" />
+  <lavorazione id="114" id_cat="9" cod_lavorazione="RII" descrizione="Ribasatura di protesi rimovibile-sistema indiretto inferiore" costoa="0" costob="0" />
+  <lavorazione id="115" id_cat="9" cod_lavorazione="RPR" descrizione="Riparazione di protesi rimovibile" costoa="0" costob="0" />
+  <lavorazione id="116" id_cat="9" cod_lavorazione="ATT" descrizione="Singolo attacco su protesi" costoa="0" costob="0" />
+  <lavorazione id="146" id_cat="10" cod_lavorazione="MOP" descrizione="Molaggio selettivo parziale" costoa="0" costob="0" />
+  <lavorazione id="147" id_cat="10" cod_lavorazione="MOT" descrizione="Molaggio selettivo totale" costoa="0" costob="0" />
+  <lavorazione id="148" id_cat="10" cod_lavorazione="BITI" descrizione="Placca diagnostica o ortotico o bite-sistema indiretto" costoa="0" costob="0" />
+  <lavorazione id="149" id_cat="10" cod_lavorazione="BITD" descrizione="Placca diagnostica o ortotico o bite-sistema diretto" costoa="0" costob="0" />
+  <lavorazione id="118" id_cat="11" cod_lavorazione="CAS" descrizione="Apparecchio di contenzione arcata superiore" costoa="0" costob="0" />
+  <lavorazione id="119" id_cat="11" cod_lavorazione="CAI" descrizione="Apparecchio di contenzione arcata inferiore" costoa="0" costob="0" />
+  <lavorazione id="120" id_cat="11" cod_lavorazione="OIN" descrizione="Ortodonzia intercettiva" costoa="0" costob="0" />
+  <lavorazione id="121" id_cat="11" cod_lavorazione="OI S" descrizione="Trattamento ortodontico di malocclusioni di I classe con apparecchiature fisse vestibolari per arcata superiore" costoa="0" costob="0" />
+  <lavorazione id="122" id_cat="11" cod_lavorazione="OI I" descrizione="Trattamento ortodontico di malocclusioni di I classe con apparecchiature fisse vestibolari per arcata inferiore" costoa="0" costob="0" />
+  <lavorazione id="123" id_cat="11" cod_lavorazione="OILS" descrizione="Trattamento ortodontico di malocclusioni di I classe con apparecchiature fisse linguali per arcata superiore" costoa="0" costob="0" />
+  <lavorazione id="124" id_cat="11" cod_lavorazione="OILI" descrizione="Trattamento ortodontico di malocclusioni di I classe con apparecchiature fisse linguali per arcata inferiore" costoa="0" costob="0" />
+  <lavorazione id="125" id_cat="11" cod_lavorazione="OII S" descrizione="Trattamento ortodontico di malocclusioni di II classe con apparecchiature fisse vestibolari per arcata superiore" costoa="0" costob="0" />
+  <lavorazione id="126" id_cat="11" cod_lavorazione="OII I" descrizione="Trattamento ortodontico di malocclusioni di II classe con apparecchiature fisse vestibolari per arcata inferiore" costoa="0" costob="0" />
+  <lavorazione id="127" id_cat="11" cod_lavorazione="OIILS" descrizione="Trattamento ortodontico di malocclusioni di II classe con apparecchiature fisse linguali per arcata superiore" costoa="0" costob="0" />
+  <lavorazione id="128" id_cat="11" cod_lavorazione="OIILI" descrizione="Trattamento ortodontico di malocclusioni di II classe con apparecchiature fisse linguali per arcata inferiore" costoa="0" costob="0" />
+  <lavorazione id="129" id_cat="11" cod_lavorazione="OIII S" descrizione="Trattamento ortodontico di malocclusioni di III classe con apparecchiature fisse vestibolari per arcata superiore" costoa="0" costob="0" />
+  <lavorazione id="130" id_cat="11" cod_lavorazione="OIII I" descrizione="Trattamento ortodontico di malocclusioni di III classe con apparecchiature fisse vestibolari per arcata inferiore" costoa="0" costob="0" />
+  <lavorazione id="131" id_cat="11" cod_lavorazione="OIIILS" descrizione="Trattamento ortodontico di malocclusioni di III classe con apparecchiature fisse linguali per arcata superiore" costoa="0" costob="0" />
+  <lavorazione id="132" id_cat="11" cod_lavorazione="OIIILI" descrizione="Trattamento ortodontico di malocclusioni di III classe con apparecchiature fisse linguali per arcata inferiore" costoa="0" costob="0" />
+  <lavorazione id="133" id_cat="11" cod_lavorazione="OIIR" descrizione="Trattamento ortodontico di malocclusioni di II classe con apparecchiature rimovibili" costoa="0" costob="0" />
+  <lavorazione id="134" id_cat="11" cod_lavorazione="OIIF" descrizione="Trattamento ortodontico di malocclusioni di II classe con apparecchiature funzionali" costoa="0" costob="0" />
+  <lavorazione id="135" id_cat="11" cod_lavorazione="OIIIR" descrizione="Trattamento ortodontico di malocclusioni di III classe con apparecchiature rimovibili" costoa="0" costob="0" />
+  <lavorazione id="136" id_cat="11" cod_lavorazione="OIIIF" descrizione="Trattamento ortodontico di malocclusioni di III classe con apparecchiature funzionali" costoa="0" costob="0" />
+  <lavorazione id="137" id_cat="11" cod_lavorazione="VSO" descrizione="Visita specialistica ortodontica" costoa="0" costob="0" />
+  <lavorazione id="138" id_cat="11" cod_lavorazione="SBES" descrizione="Supplemento brackets estetici arcata superiore" costoa="0" costob="0" />
+  <lavorazione id="139" id_cat="11" cod_lavorazione="SBEI" descrizione="Supplemento brackets estetici arcata inferiore" costoa="0" costob="0" />
+  <lavorazione id="140" id_cat="11" cod_lavorazione="TOI" descrizione="Trattamento ortodontico di malocclusioni di I classe con app. fisse vestibolari arcate inferiore e superiore" costoa="0" costob="0" />
+  <lavorazione id="141" id_cat="11" cod_lavorazione="TOII" descrizione="Trattamento ortodontico di malocclusioni di II classe con app. fisse vestibolari arcate inferiore e superiore" costoa="0" costob="0" />
+  <lavorazione id="142" id_cat="11" cod_lavorazione="TOIII" descrizione="Trattamento ortodontico di malocclusioni di III classe con app. fisse vestibolari arcate inferiore e superiore" costoa="0" costob="0" />
+  <lavorazione id="143" id_cat="11" cod_lavorazione="TOIL" descrizione="Trattamento ortodontico di malocclusioni di I classe con app. fisse linguali arcate inferiore e superiore" costoa="0" costob="0" />
+  <lavorazione id="144" id_cat="11" cod_lavorazione="TOIIL" descrizione="Trattamento ortodontico di malocclusioni di II classe con app. fisse linguali arcate inferiore e superiore" costoa="0" costob="0" />
+  <lavorazione id="145" id_cat="11" cod_lavorazione="TOIIIL" descrizione="Trattamento ortodontico di malocclusioni di III classe con app. fisse linguali arcate inferiore e superiore" costoa="0" costob="0" />
+  <lavorazione id="150" id_cat="6" cod_lavorazione="PER" descrizione="Perno in fibra di carbonio" costoa="0" costob="0" />
+  <lavorazione id="151" id_cat="6" cod_lavorazione="RIT1" descrizione="Ritrattamento 1 canale radicolare" costoa="0" costob="0" />
+  <lavorazione id="152" id_cat="6" cod_lavorazione="RIT2" descrizione="Ritrattamento 2 canali radicolari" costoa="0" costob="0" />
+  <lavorazione id="153" id_cat="6" cod_lavorazione="RIT3" descrizione="Ritrattamento 3 canali radicolari" costoa="0" costob="0" />
+  <lavorazione id="154" id_cat="8" cod_lavorazione="CP IMP" descrizione="Capsula in ceramica su impianto" costoa="0" costob="0" />
+  <lavorazione id="155" id_cat="11" cod_lavorazione="CONT S" descrizione="Placchetta di contenzione mobile arcata superiore" costoa="0" costob="0" />
+  <lavorazione id="156" id_cat="11" cod_lavorazione="CONT I" descrizione="Placchetta di contenzione mobile arcata inferiore" costoa="0" costob="0" />
+  <lavorazione id="157" id_cat="8" cod_lavorazione="CMC" descrizione="Cementazione capsula" costoa="0" costob="0" />
+  <lavorazione id="158" id_cat="5" cod_lavorazione="RIC" descrizione="Ricostruzione dente fratturato" costoa="0" costob="0" />
+  <lavorazione id="159" id_cat="9" cod_lavorazione="ATT" descrizione="Attacco di ritenzione su protesi" costoa="0" costob="0" />
+</elenco>

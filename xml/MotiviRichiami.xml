@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<motivi>
+  <motivo id="1" nome="Controllo" />
+  <motivo id="17" nome="Il paziente ha rinviato 5gg x motivi di salute" />
+  <motivo id="18" nome="Il paziente ha rinviato 10gg x motivi personale" />
+</motivi>

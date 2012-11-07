@@ -132,10 +132,11 @@
               <li class='dropdown-submenu'>
                 <a href='#'>Generale</a>
                 <ul class='dropdown-menu'>
-                  <li><a href='#'>Preferenze studio</a></li>
-                  <li><a href='#'>Sale operatorie</a></li>
-                  <li><a href='#'>Colori interventi</a></li>
-                  <li><a href='#'>Gravità interventi</a></li>
+                  <li><a href='/preferenze/generale'>Preferenze studio</a></li>
+                  <li><a href='/preferenze/sale'>Sale operatorie</a></li>
+                  <li><a href='/preferenze/categorie'>Categorie prestazioni</a></li>
+                  <li><a href='/preferenze/prestazioni'>Elenco prestazioni</a></li>
+                  <li><a href='/preferenze/gravita'>Gravità interventi</a></li>
                 </ul>
               </li>
               <li class='dropdown-submenu'>
