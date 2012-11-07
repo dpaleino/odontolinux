@@ -32,7 +32,7 @@ class Settings(object):
     def __init__(self, model):
         self.model = model
 
-    def treatment_categories(self):
+    def list_categories(self):
         data = sorted(self.model.categories.iteritems(), key=lambda t:int(t[0]))
         return template('settings/categories', data=data)
 

@@ -23,7 +23,7 @@ from odonto import gestionale
 
 @route('/settings/categories')
 def treatment_categories():
-    return gestionale.settings.treatment_categories()
+    return gestionale.settings.list_categories()
 
 @route('/settings/treatments')
 def list_treatments():

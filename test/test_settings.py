@@ -19,12 +19,22 @@
 #  MA 02110-1301, USA.
 #
 
-from odonto import settings
+from odonto import gestionale, models
 from nose.tools import raises
 
 class TestSettings(object):
-    def test_api_categories(self):
-        settings.api_list_categories()
+    def setUp(self):
+        self.req = models.AttrDict({})
 
-    def test_api_treatments(self):
-        pass
+    def test_api_list_treatments(self):
+        assert isinstance(gestionale.settings.api_list_treatments(None), dict)
+
+    def test_handle_api_treatments(self):
+        req = self.req
+        req.update(dict(
+            id = 'row1',
+            columnName = 'Descrizione',
+            value = 'foo',
+        ))
+        for action in ['add', 'delete', 'update']:
+            assert gestionale.settings.handle_api_treatments(action, req) == 'ok'
