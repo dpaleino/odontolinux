@@ -87,18 +87,15 @@ class AttrDict(dict):
 
 class Table(dict):
     _shelve = None
-    _record = None
+    _record = AttrDict
 
     def __init__(self, db):
         super(Table, self).__init__()
 
         if self._shelve:
             tmp = db[self._shelve]
-            for k in tmp:
-                if self._record:
-                    self[k] = self._record(tmp[k])
-                else:
-                    self[k] = AttrDict(tmp[k])
+            for k, v in tmp.iteritems():
+                self[k] = self._record(v)
 
 class Category(AttrDict):
     pass
