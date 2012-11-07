@@ -15,7 +15,7 @@ $(document).ready(function(){
     $('.btnConfirmDeletion').each(function(i) {
         $(this).click(function() {
             id = $(this).data('id');
-            baseurl = '/api/preferenze/prestazioni/rimuovi?id=';
+            baseurl = '/api/settings/treatments/delete?id=';
             $('.modal-footer .table-action-deletelink').attr('href', baseurl + id);
         })
     });
@@ -128,9 +128,9 @@ $(document).ready(function(){
     });
 
     $('#tblPrestazioni').dataTable().makeEditable({
-        sDeleteURL: '/api/preferenze/prestazioni/rimuovi',
-        sUpdateURL: '/api/preferenze/prestazioni/aggiorna',
-        sAddURL: '/api/preferenze/prestazioni/aggiungi',
+        sDeleteURL: '/api/settings/treatments/delete',
+        sUpdateURL: '/api/settings/treatments/update',
+        sAddURL: '/api/settings/treatments/add',
         oValidationOptions: null,
         aoColumns: [
             null,
@@ -146,7 +146,7 @@ $(document).ready(function(){
                 cssclass: 'required',
                 type: 'select',
                 onblur: 'submit',
-                loadurl: '/api/preferenze/categorie',
+                loadurl: '/api/settings/categories',
                 placeholder: 'Modifica',
             },
             {
@@ -197,7 +197,7 @@ $(document).ready(function(){
             <td>{{cat[d.cat_id].name}}</td>
             <td>{{d.prezzo}}</td>
             <td class='read_only'>
-                <a class="btn btn-mini table-action-deletelink" href="/api/preferenze/prestazioni/rimuovi?id={{key}}">
+                <a class="btn btn-mini table-action-deletelink" href="/api/settings/treatments/delete?id={{key}}">
                     <i class='icon-remove'></i>
                 </a>
             </td>

@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 #  Copyright © 2012, David Paleino <d.paleino@gmail.com>
@@ -19,22 +18,9 @@
 #  MA 02110-1301, USA.
 #
 
-from bottle import *
+from bottle import route
+from odonto import gestionale
 
-import bottle
-import os
-from datetime import datetime
-
-try:
-    import cjson as json
-except ImportError:
-    try:
-        import simplejson as json
-    except ImportError:
-        import json
-
-from odonto import *
-from odonto.routes import *
-
-if __name__ == '__main__':
-    bottle.run(host='localhost', port=8080, reloader=True)
+@route('/agenda/<req>')
+def agenda(req):
+  return gestionale.agenda(req)

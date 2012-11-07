@@ -21,6 +21,6 @@
 from bottle import *
 from bottle import jinja2_view as view, jinja2_template as template
 
-@route('/pazienti/nuovo')
-def nuovo_paziente():
-    return template('pazienti/nuovo')
+@route('/patients/new')
+def new_patient():
+    return template('patients/new')

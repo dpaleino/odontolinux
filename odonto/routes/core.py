@@ -19,6 +19,7 @@
 #
 
 from bottle import route
+from odonto import gestionale
 
 @route('/')
 def index():
@@ -27,7 +28,3 @@ def index():
 @route('/<path:re:(js|css|img)>/<filename:safepath>')
 def static(path, filename):
   return gestionale.static(path, filename)
-
-@route('/calendario/<data>')
-def calendario(data):
-  return gestionale.calendario(data)

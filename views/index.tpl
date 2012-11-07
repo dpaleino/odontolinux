@@ -76,7 +76,7 @@ $(document).ready(function() {
         defaultView: 'agendaDay',
         editable: true,
         selectable: true,
-        events: '/calendario/appuntamenti',
+        events: '/agenda/full',
         timeFormat: 'H:mm{ - H:mm}',
         columnFormat: {
             month: 'dddd',
@@ -88,7 +88,7 @@ $(document).ready(function() {
             week: "d [ MMM][ yyyy]{ '&#8212;' d MMM yyyy}",
             day: 'dddd d MMMM yyyy'
         }
-        //lazyFetching: false,
+        //~ lazyFetching: true,
     })
 });
 </script>

@@ -19,15 +19,22 @@
 #  MA 02110-1301, USA.
 #
 
-import cjson
+try:
+    import cjson as json
+except ImportError:
+    try:
+        import simplejson as json
+    except ImportError:
+        import json
+
 import shelve
 from glob import glob
 
-class Modello():
+class Model():
     DB_VER = 1
 
     def __init__(self):
-        self.db = shelve.open('odonto.db', flag='c', writeback=True)
+        self.db = shelve.open('odonto.db', flag='c', writeback=True, protocol=2)
 
         self.init_db()
         self.load_tables()
@@ -36,21 +43,24 @@ class Modello():
         if not self.db.has_key('odonto'):
             for j in glob('json/*.json'):
                 key = j[j.find('/') + 1:j.rfind('.')]
-                self.db[key] = cjson.decode(open(j).read())
+                self.db[key] = json.decode(open(j).read())
 
             self.db['odonto'] = {
-                'versione': self.DB_VER
+                'version': self.DB_VER
             }
 
+    def close(self):
+        self.db.close()
+
     def load_tables(self):
-        self.categorie = Categorie(self.db)
-        self.prestazioni = Prestazioni(self.db)
+        self.categories = Categories(self.db)
+        self.treatments = Treatments(self.db)
 
-    def categoria(self, data):
-        return Categoria(data, self.categorie)
+    def category(self, data):
+        return Category(data, self.categories)
 
-    def prestazione(self, data):
-        return Prestazione(data, self.prestazioni, model=self)
+    def treatment(self, data):
+        return Treatment(data, self.treatments, model=self)
 
 class AttrDict(dict):
     def __init__(self, data, parent=None, **kwargs):
@@ -61,8 +71,7 @@ class AttrDict(dict):
             if parent:
                 self.update(parent[data])
             else:
-                print repr(data), repr(parent)
-                raise Exception, 'AttrDict inizializzato con un non-dict senza parent'
+                raise Exception, 'AttrDict called with non-dict object without a parent'
 
     def __getattr__(self, key):
         return self[key]
@@ -91,29 +100,46 @@ class Table(dict):
                 else:
                     self[k] = AttrDict(tmp[k])
 
-class Categoria(AttrDict):
+class Category(AttrDict):
     pass
-    #~ def __repr__(self):
-        #~ return '<Categoria %s>' % super(Categoria, self).__repr__()
 
-class Categorie(Table):
-    _shelve = 'categorie'
-    _record = Categoria
+class Categories(Table):
+    _shelve = 'categories'
+    _record = Category
 
-class Prestazione(AttrDict):
+class Treatment(AttrDict):
     def __init__(self, data, parent=None, model=None):
-        super(Prestazione, self).__init__(data, parent)
+        super(Treatment, self).__init__(data, parent)
         self.model = model
 
     @property
-    def categoria(self):
+    def category(self):
         if not self.model:
-            raise Exception, 'Prestazione non collegata al Model'
-        return self.model.categoria(self.cat_id)
+            raise Exception, 'Treatment not linked to a Model'
+        return self.model.category(self.cat_id)
 
-class Prestazioni(Table):
-    _shelve = 'prestazioni'
-    _record = Prestazione
+    @category.setter
+    def category(self, value):
+        for k, v in self.model.categories.iteritems():
+            if v == value:
+                self.cat_id = k
+                break
+
+    # FIXME: 
+    @property
+    def prezzo(self):
+        if self.has_key('prezzo'):
+            return '%.2f' % self['prezzo']
+        else:
+            return '%.2f' % 0.0
+
+    @prezzo.setter
+    def prezzo(self, value):
+        self['prezzo'] = '%.2f' % float(value)
+
+class Treatments(Table):
+    _shelve = 'treatments'
+    _record = Treatment
 
 #~ 1. categorie interventi
 #~ 2. interventi

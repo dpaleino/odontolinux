@@ -19,12 +19,12 @@
 #  MA 02110-1301, USA.
 #
 
-from odonto import preferenze
+from odonto import settings
 from nose.tools import raises
 
-class TestPreferenze(object):
-    def test_api_categorie(self):
-        preferenze.api_elenco_categorie()
+class TestSettings(object):
+    def test_api_categories(self):
+        settings.api_list_categories()
 
-    def test_api_prestazioni(self):
+    def test_api_treatments(self):
         pass

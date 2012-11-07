@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 #  Copyright © 2012, David Paleino <d.paleino@gmail.com>
@@ -19,22 +18,25 @@
 #  MA 02110-1301, USA.
 #
 
-from bottle import *
+from bottle import request, route
+from odonto import gestionale
 
-import bottle
-import os
-from datetime import datetime
+@route('/settings/categories')
+def treatment_categories():
+    return gestionale.settings.treatment_categories()
 
-try:
-    import cjson as json
-except ImportError:
-    try:
-        import simplejson as json
-    except ImportError:
-        import json
+@route('/settings/treatments')
+def list_treatments():
+    return gestionale.settings.list_treatments()
 
-from odonto import *
-from odonto.routes import *
+@route('/api/settings/categories', method='ANY')
+def api_list_categories():
+    return gestionale.settings.api_list_categories()
 
-if __name__ == '__main__':
-    bottle.run(host='localhost', port=8080, reloader=True)
+@route('/api/settings/treatments', method='ANY')
+def api_list_treatments():
+    return gestionale.settings.api_list_treatments(request.POST)
+
+@route('/api/settings/treatments/<action:re:(add|delete|update)>', method='ANY')
+def handle_api_treatments(action):
+    return gestionale.settings.handle_api_treatments(action, request.POST)

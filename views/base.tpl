@@ -32,7 +32,7 @@
               <b class='caret'></b>
             </a>
             <ul class='dropdown-menu' role='menu' aria-labelledby='dPazienti'>
-              <li><a href='/pazienti/nuovo'><i class="icon-plus"></i> Aggiungi paziente</a></li>
+              <li><a href='/patients/new'><i class="icon-plus"></i> Aggiungi paziente</a></li>
               <li><a href='#'><i class="icon-search"></i> Visualizza pazienti</a></li>
               <li><a href='#'><i class="icon-time"></i> Lista d'attesa</a></li>
               <li><a href='#'><i class="icon-folder-open"></i> Pazienti con cure da effettuare</a></li>
@@ -132,11 +132,11 @@
               <li class='dropdown-submenu'>
                 <a href='#'>Generale</a>
                 <ul class='dropdown-menu'>
-                  <li><a href='/preferenze/generale'>Preferenze studio</a></li>
-                  <li><a href='/preferenze/sale'>Sale operatorie</a></li>
-                  <li><a href='/preferenze/categorie'>Categorie prestazioni</a></li>
-                  <li><a href='/preferenze/prestazioni'>Elenco prestazioni</a></li>
-                  <li><a href='/preferenze/gravita'>Gravità interventi</a></li>
+                  <li><a href='/settings/general'>Preferenze studio</a></li>
+                  <li><a href='/settings/units'>Sale operatorie</a></li>
+                  <li><a href='/settings/categories'>Categorie prestazioni</a></li>
+                  <li><a href='/settings/treatments'>Elenco prestazioni</a></li>
+                  <li><a href='/settings/severities'>Gravità interventi</a></li>
                 </ul>
               </li>
               <li class='dropdown-submenu'>
