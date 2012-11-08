@@ -30,6 +30,7 @@ except ImportError:
 import shelve
 from glob import glob
 from collections import defaultdict
+from lockfile import FileLock
 
 class Transaction():
     def __init__(self, model):
