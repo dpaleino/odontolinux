@@ -127,7 +127,11 @@ $(document).ready(function(){
         }
     });
 
-    $('#tblPrestazioni').dataTable().makeEditable({
+    $('#tblPrestazioni').dataTable({
+        aaSorting: [
+            [ 2, 'asc' ],
+        ],
+    }).makeEditable({
         sDeleteURL: '/api/settings/treatments/delete',
         sUpdateURL: '/api/settings/treatments/update',
         sAddURL: '/api/settings/treatments/add',
