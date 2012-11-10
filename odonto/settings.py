@@ -98,13 +98,13 @@ class Settings(object):
                 del data[rowid]
                 return 'ok'
             except KeyError:
-                return 'fail'
+                return 'ERROR'
         elif action == 'update':
             value = req.value
             try:
                 row = data[rowid]
             except KeyError:
-                return 'fail'
+                return 'ERROR'
             with self.model.transaction:
                 if req.columnName == 'Descrizione':
                     row.name = value
@@ -124,13 +124,13 @@ class Settings(object):
                 del data[rowid]
                 return 'ok'
             except KeyError:
-                return 'fail'
+                return 'ERROR'
         elif action == 'update':
             value = req.value
             try:
                 row = data[rowid]
             except KeyError:
-                return 'fail'
+                return 'ERROR'
             with self.model.transaction:
                 if req.columnName == 'Codice':
                     row.cod = value
