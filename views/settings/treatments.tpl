@@ -1,24 +1,27 @@
 {% extends 'base.tpl' %}
 
 {% block styles %}
-<!--<link rel='stylesheet' href='/css/flexigrid.min.css'>-->
 <link rel='stylesheet' href='/css/jquery.dataTables.css'>
 {% endblock %}
 
 {% block scripts %}
-<script src='/js/jquery.dataTables.js'></script>
-<script src='/js/jquery.dataTables.editable.js'></script>
-<script src='/js/jquery.jeditable.js'></script>
-<script src='/js/jquery.validate.js'></script>
+<script src='/js/jquery.dataTables.min.js'></script>
+<script src='/js/jquery.dataTables.editable.min.js'></script>
+<script src='/js/jquery.jeditable.min.js'></script>
+<script src='/js/jquery.validate.min.js'></script>
 <script>
+//~ var confirmedDeletion = false;
 $(document).ready(function(){
-    $('.btnConfirmDeletion').each(function(i) {
-        $(this).click(function() {
-            id = $(this).data('id');
-            baseurl = '/api/settings/treatments/delete?id=';
-            $('.modal-footer .table-action-deletelink').attr('href', baseurl + id);
-        })
-    });
+    //~ $('tr>td>button.btn').on('click', function(event) {
+        //~ // $('#mdlConfirm .btn-primary').attr('href', '/api/settings/treatments/delete?id=' + $(this).parents('tr').attr('id'));
+        //~ $('#mdlConfirm').modal();
+    //~ });
+
+    //~ $('#mdlConfirm').on('click', '.btn, .close', function() {
+        //~ $(this).addClass('modal-result'); // mark which button was clicked
+    //~ }).on('hidden', function() {
+        //~ confirmedDeletion = $('#mdlConfirm .modal-result').filter('.btn-primary').length > 0;
+    //~ });
 
     $.extend($.fn.dataTableExt.oStdClasses, {
         sWrapper: 'dataTables_wrapper form-inline',
@@ -36,7 +39,7 @@ $(document).ready(function(){
         };
     };
 
-    $.extend( $.fn.dataTableExt.oPagination, {
+    $.extend($.fn.dataTableExt.oPagination, {
         "bootstrap": {
             "fnInit": function(oSettings, nPaging, fnDraw) {
                 var oLang = oSettings.oLanguage.oPaginate;
@@ -136,6 +139,8 @@ $(document).ready(function(){
         sUpdateURL: '/api/settings/treatments/update',
         sAddURL: '/api/settings/treatments/add',
         oValidationOptions: null,
+        oDeleteRowButtonOptions: null,
+        sDeleteRowButtonId: '',
         aoColumns: [
             null,
             {
@@ -159,21 +164,12 @@ $(document).ready(function(){
             },
             null
         ],
+        // FIXME: usare una modal bootstrap.
         fnOnDeleting: function(tr, id, fnDeleteRow) {
-            $('#mdlConfirm').modal();
-            $('#mdlConfirm').on('hidden', function() {
-                // do something…
-            })
-            return false;
-            //~ jConfirm('Please confirm that you want to delete row with id ' + id, 'Confirm Delete', function (confirmed) {
-                //~ if (confirmed) {
-                    //~ fnDeleteRow(id);
-                //~ }
-            //~ });
-        }
+            return confirm('Sicuro/a di voler cancellare questa riga?');
+        },
     });
 });
-// http://code.google.com/p/jquery-datatables-editable/wiki/AddingNewRecords
 </script> 
 {% endblock %}
 
@@ -201,9 +197,9 @@ $(document).ready(function(){
             <td>{{cat[d.cat_id].name}}</td>
             <td>{{d.prezzo}}</td>
             <td class='read_only'>
-                <a class="btn btn-mini table-action-deletelink" href="/api/settings/treatments/delete?id={{key}}">
+                <button type='button' class='btn btn-mini table-action-deletelink'>
                     <i class='icon-remove'></i>
-                </a>
+                </button>
             </td>
         </tr>
       {% endfor %}

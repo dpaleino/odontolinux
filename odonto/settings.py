@@ -95,11 +95,17 @@ class Settings(object):
         if action == 'add':
             pass
         elif action == 'delete':
-            del data[rowid]
-            return 'ok'
+            try:
+                del data[rowid]
+                return 'ok'
+            except KeyError:
+                return 'fail'
         elif action == 'update':
             value = req.value
-            row = data[rowid]
+            try:
+                row = data[rowid]
+            except KeyError:
+                return 'fail'
             with self.model.transaction:
                 if req.columnName == 'Codice':
                     row.cod = value
