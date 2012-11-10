@@ -192,7 +192,7 @@
           </li>
         </ul>
         <ul class='nav pull-right'>
-          <li><p class='navbar-text'>20:18</p></li>
+          <li><p class='navbar-text' id='navbar-clock'></p></li>
         </ul>
       </div>
     </div>
@@ -204,6 +204,7 @@
 </div>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src='/js/local.js'></script>
 {% block scripts %}{% endblock %}
 </body>
 </html>
