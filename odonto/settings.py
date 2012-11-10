@@ -110,7 +110,7 @@ class Settings(object):
                     row.name = value
                 elif req.columnName == 'Colore':
                     row.color = value.replace('#', '')
-            return 'ok'
+            return value
 
     def handle_api_treatments(self, action, req):
         data = self.model.treatments
