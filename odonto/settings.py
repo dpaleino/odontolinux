@@ -87,6 +87,31 @@ class Settings(object):
 
         return ret
 
+    def handle_api_categories(self, action, req):
+        data = self.model.categories
+        rowid = req.id.replace('row', '')
+
+        if action == 'add':
+            pass
+        elif action == 'delete':
+            try:
+                del data[rowid]
+                return 'ok'
+            except KeyError:
+                return 'fail'
+        elif action == 'update':
+            value = req.value
+            try:
+                row = data[rowid]
+            except KeyError:
+                return 'fail'
+            with self.model.transaction:
+                if req.columnName == 'Descrizione':
+                    row.name = value
+                elif req.columnName == 'Colore':
+                    row.color = value.replace('#', '')
+            return 'ok'
+
     def handle_api_treatments(self, action, req):
         data = self.model.treatments
         cat = self.model.categories

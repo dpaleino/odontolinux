@@ -37,6 +37,10 @@ def api_list_categories():
 def api_list_treatments():
     return gestionale.settings.api_list_treatments(request.POST)
 
+@route('/api/settings/categories/<action:re:(add|delete|update)>', method='ANY')
+def handle_api_categories(action):
+    return gestionale.settings.handle_api_categories(action, request.POST)
+
 @route('/api/settings/treatments/<action:re:(add|delete|update)>', method='ANY')
 def handle_api_treatments(action):
     return gestionale.settings.handle_api_treatments(action, request.POST)
